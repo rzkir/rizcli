@@ -1,2 +1,5 @@
-User-Agent: *
-Disallow:
+User-agent: *
+Allow: /
+
+# Ganti dengan domain kamu sendiri
+Sitemap: https://rizki-cli.rizkiramadhan.web.id/sitemap.xml
