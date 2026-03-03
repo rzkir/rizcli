@@ -6,7 +6,7 @@
 
     <Header />
 
-    <main>
+    <main class="pt-16">
       <HeroSection @copy-command="copyCommand" />
       <TechStack />
       <Features />

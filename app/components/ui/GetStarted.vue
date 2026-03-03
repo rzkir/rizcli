@@ -1,6 +1,6 @@
 <template>
   <!-- CTA Section -->
-  <section class="py-24 px-6 bg-white border-t border-brand-border">
+  <section id="get-started" class="py-10 md:py-24 px-4 md:px-6 bg-white border-t border-brand-border">
     <div class="max-w-4xl mx-auto text-center">
       <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight text-brand-dark mb-6">
         Ready to speed up your workflow?
@@ -10,20 +10,14 @@
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <button
-          id="cta-bottom-copy"
+        <button id="cta-bottom-copy"
           class="px-8 py-4 rounded-xl text-base font-semibold bg-brand-dark text-white hover:bg-slate-800 transition-colors shadow-sm flex items-center gap-2 w-full sm:w-auto justify-center"
-          @click="emit('copy-command')"
-        >
+          @click="emit('copy-command')">
           Copy Command
           <Icon name="lucide:copy" class="text-lg" />
         </button>
-        <a
-          id="cta-bottom-github"
-          href="https://github.com/rzkir/rizki-cli"
-          target="_blank"
-          class="px-8 py-4 rounded-xl text-base font-medium text-brand-dark bg-white border border-brand-border hover:bg-brand-surface transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
-        >
+        <a id="cta-bottom-github" href="https://github.com/rzkir/rizki-cli" target="_blank"
+          class="px-8 py-4 rounded-xl text-base font-medium text-brand-dark bg-white border border-brand-border hover:bg-brand-surface transition-colors flex items-center gap-2 w-full sm:w-auto justify-center">
           <Icon name="lucide:star" class="text-lg" />
           Star on GitHub
         </a>

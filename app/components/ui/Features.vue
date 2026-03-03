@@ -1,6 +1,6 @@
 <template>
   <!-- Features Section -->
-  <section id="features" class="py-24 px-6 relative bg-white">
+  <section id="features" class="py-10 md:py-24 px-4 md:px-6 relative bg-white">
     <div class="max-w-7xl mx-auto">
       <div class="text-center max-w-2xl mx-auto mb-16">
         <h2 class="font-display text-3xl md:text-4xl font-bold mb-4 text-brand-dark">Why use Rizki CLI?</h2>

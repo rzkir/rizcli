@@ -23,6 +23,12 @@
       "description": "Transparent and free forever. View how templates are built, contribute your own, or customize it for your needs."
     }
   ],
+  "howItWorksSection": {
+    "titlePrefix": "Start building in",
+    "titleHighlight": "3 simple steps",
+    "description": "No global installation required. Use NPX to always fetch the latest version of our templates directly from the repository.",
+    "terminalTitle": "Quick Start"
+  },
   "howItWorksSteps": [
     {
       "title": "Run the command",
@@ -40,13 +46,13 @@
   "quickStart": [
     {
       "label": "# Execute CLI",
-      "textBefore": "npx rizki-cli create ",
+      "textBefore": "rizki create ",
       "highlight": "<project-name>",
       "textAfter": ""
     },
     {
       "label": "# Navigate to directory",
-      "textBefore": "cd ",
+      "textBefore": "",
       "highlight": "<project-name>",
       "textAfter": ""
     },
@@ -56,5 +62,38 @@
       "highlight": "",
       "textAfter": ""
     }
-  ]
+  ],
+  "heroTerminal": {
+    "command": "rizki create my-app",
+    "templatePrompt": "Pilih template:",
+    "templates": [
+      "next-js-fullstack",
+      "next-js-frontend",
+      "vue",
+      "php native",
+      "Keluar"
+    ],
+    "selectedTemplate": "next-js-fullstack",
+    "variantPrompt": "Pilih varian Next.js fullstack:",
+    "variants": [
+      "Next.js Fullstack + MongoDB",
+      "Next.js Fullstack + Firebase",
+      "Kembali",
+      "Keluar"
+    ],
+    "selectedVariant": "Next.js Fullstack + MongoDB",
+    "fetching": {
+      "loadingText": "Fetching templates...",
+      "successText": "Templates fetched successfully"
+    },
+    "generationSteps": [
+      "Downloaded template structure",
+      "Initialized git repository"
+    ]
+  },
+  "howItWorksConfig": {
+    "typingSpeedMs": 70,
+    "stepIntervalMs": 2600,
+    "observerThreshold": 0.3
+  }
 }

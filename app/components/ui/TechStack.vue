@@ -1,7 +1,7 @@
 <template>
   <!-- Logos / Tech Stack -->
   <section class="py-10 border-y border-brand-border bg-brand-surface">
-    <div class="max-w-7xl mx-auto px-6 relative">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 relative">
       <p class="text-center text-sm font-medium text-brand-muted mb-10 uppercase tracking-wider">
         Build with your favorite tools
       </p>
