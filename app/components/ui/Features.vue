@@ -11,49 +11,24 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Card 1 -->
-        <div
+        <div v-for="feature in features" :key="feature.title"
           class="bg-brand-surface border border-brand-border rounded-2xl p-8 hover:shadow-soft hover:border-brand-cyan/30 transition-all duration-300 group">
           <div
             class="w-12 h-12 rounded-xl bg-white border border-brand-border flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <Icon name="lucide:zap" class="text-2xl text-brand-cyan" />
+            <Icon :name="feature.icon" class="text-2xl text-brand-cyan" />
           </div>
-          <h3 class="font-display text-xl font-bold mb-3 text-brand-dark">Zero Config Setup</h3>
+          <h3 class="font-display text-xl font-bold mb-3 text-brand-dark">{{ feature.title }}</h3>
           <p class="text-brand-muted leading-relaxed">
-            Stop wasting hours configuring Webpack, ESLint, or folder structures. Run one command and your dev
-            environment is ready instantly.
-          </p>
-        </div>
-
-        <!-- Card 2 -->
-        <div
-          class="bg-brand-surface border border-brand-border rounded-2xl p-8 hover:shadow-soft hover:border-brand-cyan/30 transition-all duration-300 group">
-          <div
-            class="w-12 h-12 rounded-xl bg-white border border-brand-border flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <Icon name="lucide:layers" class="text-2xl text-brand-cyan" />
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3 text-brand-dark">Curated Templates</h3>
-          <p class="text-brand-muted leading-relaxed">
-            Choose from a selection of hand-crafted templates. From simple Native setups to modern API
-            architectures.
-          </p>
-        </div>
-
-        <!-- Card 3 -->
-        <div
-          class="bg-brand-surface border border-brand-border rounded-2xl p-8 hover:shadow-soft hover:border-brand-cyan/30 transition-all duration-300 group">
-          <div
-            class="w-12 h-12 rounded-xl bg-white border border-brand-border flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform">
-            <Icon name="lucide:github" class="text-2xl text-brand-cyan" />
-          </div>
-          <h3 class="font-display text-xl font-bold mb-3 text-brand-dark">Open Source</h3>
-          <p class="text-brand-muted leading-relaxed">
-            Transparent and free forever. View how templates are built, contribute your own, or customize it for
-            your
-            needs.
+            {{ feature.description }}
           </p>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup>
+import data from "@/assets/data/data.json";
+
+const features = data.features;
+</script>

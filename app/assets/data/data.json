@@ -1,0 +1,60 @@
+{
+  "techStacks": [
+    { "name": "PHP", "icon": "logos:php" },
+    { "name": "Node.js", "icon": "logos:nodejs-icon" },
+    { "name": "React", "icon": "logos:react" },
+    { "name": "Tailwind CSS", "icon": "logos:tailwindcss-icon" },
+    { "name": "TypeScript", "icon": "logos:typescript-icon" }
+  ],
+  "features": [
+    {
+      "icon": "lucide:zap",
+      "title": "Zero Config Setup",
+      "description": "Stop wasting hours configuring Webpack, ESLint, or folder structures. Run one command and your dev environment is ready instantly."
+    },
+    {
+      "icon": "lucide:layers",
+      "title": "Curated Templates",
+      "description": "Choose from a selection of hand-crafted templates. From simple Native setups to modern API architectures."
+    },
+    {
+      "icon": "lucide:github",
+      "title": "Open Source",
+      "description": "Transparent and free forever. View how templates are built, contribute your own, or customize it for your needs."
+    }
+  ],
+  "howItWorksSteps": [
+    {
+      "title": "Run the command",
+      "description": "Execute the CLI via NPX in your desired directory."
+    },
+    {
+      "title": "Select a template",
+      "description": "Choose from the interactive prompt list."
+    },
+    {
+      "title": "Start coding",
+      "description": "Your project is ready. Open it in your editor."
+    }
+  ],
+  "quickStart": [
+    {
+      "label": "# Execute CLI",
+      "textBefore": "npx rizki-cli create ",
+      "highlight": "<project-name>",
+      "textAfter": ""
+    },
+    {
+      "label": "# Navigate to directory",
+      "textBefore": "cd ",
+      "highlight": "<project-name>",
+      "textAfter": ""
+    },
+    {
+      "label": "# Open in VS Code",
+      "textBefore": "code .",
+      "highlight": "",
+      "textAfter": ""
+    }
+  ]
+}

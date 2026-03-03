@@ -15,42 +15,17 @@
           </p>
 
           <div class="space-y-6">
-            <div class="flex gap-4">
+            <div v-for="(step, index) in howItWorksSteps" :key="step.title" class="flex gap-4">
               <div class="flex flex-col items-center">
                 <div
                   class="w-8 h-8 rounded-full bg-white border border-brand-border shadow-sm flex items-center justify-center text-brand-cyan font-mono text-sm font-bold shrink-0">
-                  1
+                  {{ index + 1 }}
                 </div>
-                <div class="w-px h-full bg-brand-border mt-2" />
+                <div v-if="index !== howItWorksSteps.length - 1" class="w-px h-full bg-brand-border mt-2" />
               </div>
               <div class="pb-4">
-                <h4 class="text-lg font-bold text-brand-dark mb-1">Run the command</h4>
-                <p class="text-brand-muted">Execute the CLI via NPX in your desired directory.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-8 h-8 rounded-full bg-white border border-brand-border shadow-sm flex items-center justify-center text-brand-cyan font-mono text-sm font-bold shrink-0">
-                  2
-                </div>
-                <div class="w-px h-full bg-brand-border mt-2" />
-              </div>
-              <div class="pb-4">
-                <h4 class="text-lg font-bold text-brand-dark mb-1">Select a template</h4>
-                <p class="text-brand-muted">Choose from the interactive prompt list.</p>
-              </div>
-            </div>
-            <div class="flex gap-4">
-              <div class="flex flex-col items-center">
-                <div
-                  class="w-8 h-8 rounded-full bg-white border border-brand-border shadow-sm flex items-center justify-center text-brand-cyan font-mono text-sm font-bold shrink-0">
-                  3
-                </div>
-              </div>
-              <div>
-                <h4 class="text-lg font-bold text-brand-dark mb-1">Start coding</h4>
-                <p class="text-brand-muted">Your project is ready. Open it in your editor.</p>
+                <h4 class="text-lg font-bold text-brand-dark mb-1">{{ step.title }}</h4>
+                <p class="text-brand-muted">{{ step.description }}</p>
               </div>
             </div>
           </div>
@@ -63,22 +38,16 @@
               <span class="text-xs text-slate-500 font-mono font-medium">Quick Start</span>
             </div>
             <div class="p-6 font-mono text-sm leading-8 overflow-x-auto text-brand-dark">
-              <div class="text-slate-400 mb-1"># Execute CLI</div>
-              <div class="flex mb-6">
-                <span class="text-brand-cyan mr-3">$</span>
-                <span>npx rizki-cli create <span class="text-indigo-600">&lt;project-name&gt;</span></span>
-              </div>
-
-              <div class="text-slate-400 mb-1"># Navigate to directory</div>
-              <div class="flex mb-6">
-                <span class="text-brand-cyan mr-3">$</span>
-                <span>cd <span class="text-indigo-600">&lt;project-name&gt;</span></span>
-              </div>
-
-              <div class="text-slate-400 mb-1"># Open in VS Code</div>
-              <div class="flex">
-                <span class="text-brand-cyan mr-3">$</span>
-                <span>code .</span>
+              <div v-for="(cmd, index) in quickStart" :key="index" class="mb-6 last:mb-0">
+                <div class="text-slate-400 mb-1">{{ cmd.label }}</div>
+                <div class="flex">
+                  <span class="text-brand-cyan mr-3">$</span>
+                  <span>
+                    {{ cmd.textBefore }}
+                    <span v-if="cmd.highlight" class="text-indigo-600">{{ cmd.highlight }}</span>
+                    {{ cmd.textAfter }}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -87,3 +56,10 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import data from "@/assets/data/data.json";
+
+const howItWorksSteps = data.howItWorksSteps;
+const quickStart = data.quickStart;
+</script>
