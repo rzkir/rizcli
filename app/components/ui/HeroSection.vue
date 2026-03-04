@@ -32,16 +32,16 @@
                 @click="emit('copy-command')">
                 <div class="flex items-center gap-2">
                   <span class="text-brand-cyan font-bold">$</span>
-                  <span class="text-brand-dark font-medium">npx rizki-cli create</span>
+                  <span class="text-brand-dark font-medium">rizki create my-app</span>
                 </div>
                 <div class="w-px h-4 bg-brand-border mx-2 hidden sm:block" />
                 <Icon name="lucide:copy" class="text-brand-muted group-hover:text-brand-cyan transition-colors" />
               </button>
             </div>
-            <NuxtLink to="https://github.com/rzkir/rizki-cli" target="_blank"
+            <NuxtLink to="https://www.npmjs.com/package/rizki-cli" target="_blank"
               class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-medium text-brand-dark bg-brand-surface border border-transparent hover:border-brand-border transition-colors w-full sm:w-auto">
-              View GitHub
-              <iconify-icon icon="lucide:arrow-right" class="text-brand-muted" />
+              View Documentation
+              <Icon name="lucide:arrow-right" class="text-brand-muted" />
             </NuxtLink>
           </div>
         </div>
@@ -66,7 +66,7 @@
                   class="w-3 h-3 rounded-full border border-emerald-500/70 bg-emerald-500 shadow-[0_0_0_1px_rgba(0,0,0,0.35)]" />
               </div>
               <div class="mx-auto text-xs text-slate-400 font-medium font-sans flex items-center gap-1.5">
-                <iconify-icon icon="lucide:terminal" class="text-slate-400" /> rizki-cli
+                <Icon name="lucide:terminal" class="text-slate-400" /> rizki-cli
               </div>
             </div>
             <!-- Body -->

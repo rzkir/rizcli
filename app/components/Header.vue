@@ -46,9 +46,9 @@
           <Icon name="lucide:github" class="text-xl" />
         </a>
 
-        <a href="/#get-started"
+        <a href="https://www.npmjs.com/package/rizki-cli" target="_blank"
           class="hidden sm:flex items-center gap-2 bg-brand-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-slate-800 transition-colors shadow-sm">
-          Get Started
+          Documentation
         </a>
 
         <button type="button"
@@ -64,40 +64,28 @@
       <div v-if="isMenuOpen" class="md:hidden fixed inset-x-0 top-16 z-40 px-4 pb-4">
         <div class="rounded-xl border border-brand-border bg-white shadow-soft py-3">
           <nav class="flex flex-col gap-1">
-            <a
-              href="/"
-              :class="[
-                'px-3 py-2 text-sm font-medium rounded-md transition-colors',
-                isActive() ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
-              ]"
-              @click="isMenuOpen = false">
+            <a href="/" :class="[
+              'px-3 py-2 text-sm font-medium rounded-md transition-colors',
+              isActive() ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
+            ]" @click="isMenuOpen = false">
               Home
             </a>
-            <a
-              href="/#features"
-              :class="[
-                'px-3 py-2 text-sm font-medium rounded-md transition-colors',
-                isActive('#features') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
-              ]"
-              @click="isMenuOpen = false">
+            <a href="/#features" :class="[
+              'px-3 py-2 text-sm font-medium rounded-md transition-colors',
+              isActive('#features') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
+            ]" @click="isMenuOpen = false">
               Features
             </a>
-            <a
-              href="/#how-it-works"
-              :class="[
-                'px-3 py-2 text-sm font-medium rounded-md transition-colors',
-                isActive('#how-it-works') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
-              ]"
-              @click="isMenuOpen = false">
+            <a href="/#how-it-works" :class="[
+              'px-3 py-2 text-sm font-medium rounded-md transition-colors',
+              isActive('#how-it-works') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
+            ]" @click="isMenuOpen = false">
               How it works
             </a>
-            <a
-              href="/#get-started"
-              :class="[
-                'px-3 py-2 text-sm font-medium rounded-md transition-colors',
-                isActive('#get-started') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
-              ]"
-              @click="isMenuOpen = false">
+            <a href="/#get-started" :class="[
+              'px-3 py-2 text-sm font-medium rounded-md transition-colors',
+              isActive('#get-started') ? 'text-brand-cyan bg-brand-surface' : 'text-brand-muted hover:text-brand-cyan hover:bg-brand-surface'
+            ]" @click="isMenuOpen = false">
               Templates
             </a>
           </nav>
